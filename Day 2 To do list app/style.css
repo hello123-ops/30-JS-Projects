@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+.container {
+  background: linear-gradient(135deg, #153667, #4e085f);
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+}
+.app {
+  border: none;
+  border-radius: 0.8rem;
+  min-width: 40vw;
+  min-height: 30vh;
+  background-color: #fff;
+  padding: 1rem 2rem;
+}
+.title {
+  color: #002765;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0.7rem auto 0.7rem;
+}
+.clearAll {
+  border: none;
+  background: none;
+  color: #555;
+  font-size: 22px;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.clearAll::after {
+  content: "Clear All";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #555;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+.clearAll:hover {
+  opacity: 0.8;
+}
+.clearAll:hover::after {
+  opacity: 1;
+  visibility: visible;
+  top: 120%;
+}
+.input-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3rem;
+  width: 100%;
+  background-color: #edeef0;
+  border-radius: 3rem;
+  padding-left: 12px;
+  margin: 0 0 1rem;
+}
+.input-area {
+  height: 100%;
+  flex: 1;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+.Add-btn {
+  border: none;
+  border-radius: 40px;
+  outline: none;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #ff5945;
+  padding: 16px 50px;
+  cursor: pointer;
+}
+.Add-btn:hover {
+  opacity: 0.8;
+}
+.Add-btn:active {
+  opacity: 1;
+}
+.content-area {
+  padding-left: 1.5rem;
+}
+.content-area li {
+  list-style: none;
+  font-size: 17px;
+  cursor: pointer;
+  position: relative;
+}
+.checked {
+  text-decoration: line-through;
+  color: #555;
+}
+.content-area li span {
+  position: absolute;
+  right: 0;
+  color: #555;
+  height: 40px;
+  width: 40px;
+  font-size: 22px;
+  border-radius: 50%;
+}
+.content-area li span:hover {
+  opacity: 0.8;
+}

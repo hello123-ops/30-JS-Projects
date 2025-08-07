@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="int-loc">
+        <input
+          class="loc-input"
+          placeholder="Enter Location"
+          type="text"
+          spellcheck="false"
+        />
+        <div class="search-icon">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+      </div>
+      <div class="error">
+        <p>Invalid Weather Location</p>
+      </div>
+      <div class="content">
+        <div class="hero">
+          <div class="img-weather">
+            <img src="sunny.png" />
+          </div>
+          <div class="hero-detail">
+            <div class="temp"><h1>22°c</h1></div>
+            <div class="location">New York</div>
+          </div>
+        </div>
+
+        <div class="weather-info">
+          <div class="humidity">
+            <img src="humidity.png" alt="Humidity Icon" class="logo" />
+            <div class="info">
+              <h3 class="hum-percentage">50%</h3>
+              <p>Humidity</p>
+            </div>
+          </div>
+          <div class="wind-speed">
+            <img src="Windspeed.png" class="logo" />
+            <div class="info">
+              <h3 class="speed">15 km/h</h3>
+              <p>Wind Speed</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
