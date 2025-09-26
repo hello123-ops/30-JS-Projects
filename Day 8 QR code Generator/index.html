@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QR CODE generator</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  </head>
+  <body>
+    <main class="container">
+      <h1>QR Code Generator</h1>
+      <form id="qr-form" autocomplete="off">
+        <label for="qr-input" class="sr-only">Enter text or URL</label>
+        <input
+          type="text"
+          id="qr-input"
+          placeholder="Enter text or URL"
+          maxlength="128"
+          required
+          aria-describedby="input-error"
+        />
+        <button type="submit" id="generate-btn">Generate</button>
+        <span id="input-error" class="error-message hidden"
+          >Input cannot be empty.</span
+        >
+        <span id="loading-indicator" class="loading-message hidden" aria-live="polite"
+          ><span class="spinner" aria-hidden="true"></span>Generating...</span
+        >
+      </form>
+      <div id="qr-display" class="qrcode-area"></div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

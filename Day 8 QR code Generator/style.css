@@ -1,0 +1,150 @@
+body {
+  font-family: 'Segoe UI', 'Ubuntu', Arial, sans-serif;
+  background: #eef1f4;
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container layout and shadow */
+.container {
+  background: #fff;
+  box-shadow: 0 6px 42px rgba(35,49,83,0.12);
+  border-radius: 18px;
+  padding: 32px 24px;
+  max-width: 340px;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* Heading style */
+h1 {
+  color: #242642;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+.sr-only {
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+}
+
+/* Form styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+/* Input field styling and responsive focus */
+input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #d8dee9;
+  box-shadow: 0 2px 8px rgba(35,49,83,0.06);
+  transition: border 0.15s;
+}
+
+input[type="text"]:focus {
+  border: 1.5px solid #4791ff;
+  outline: none;
+}
+
+/* Submit button styling with feedback */
+button[type="submit"] {
+  background-color: #4791ff;
+  color: #fff;
+  padding: 12px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(35,49,83,0.08);
+  transition: background 0.18s;
+}
+
+button[type="submit"]:active {
+  background-color: #2766c6;
+}
+
+button[type="submit"]:hover {
+  background-color: #2565c6;
+}
+
+/* Error message styling */
+.error-message {
+  color: #c92a2a;
+  font-size: 0.96rem;
+  background: #ffeaea;
+  padding: 7px 10px;
+  border-radius: 5px;
+  margin-top: 2px;
+  display: block;
+  
+}
+
+/* Loading message styling */
+.loading-message {
+  color: #8890a1;
+  font-size: 1rem;
+  background: #eaf4ff;
+  padding: 7px 10px;
+  border-radius: 5px;
+  margin-top: 2px;
+  display: block;
+}
+
+.spinner {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin-right: 8px;
+  border-radius: 50%;
+  border: 2px solid rgba(0,0,0,0.08);
+  border-top-color: #4791ff;
+  animation: spin 0.8s linear infinite;
+  vertical-align: middle;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* QR code display area */
+.qrcode-area {
+  min-height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 0;
+}
+
+.qrcode-area > img, .qrcode-area > canvas, .qrcode-area > div {
+  transition: transform 200ms ease, opacity 200ms ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .container {
+    padding: 18px 8px;
+    max-width: 98vw;
+  }
+  h1 {
+    font-size: 1.2rem;
+  }
+}
+
+.hidden {
+  display: none;
+}
