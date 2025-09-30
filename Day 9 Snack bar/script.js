@@ -6,7 +6,7 @@ let snackbar = document.getElementById("snackbar");
 
 let newSnack = (inputText, type) => {
   let snack = document.createElement("div");
-  snack.classList.add("snackbar");      // individual item
+  snack.classList.add("snackbar"); // individual item
   if (type === "error") snack.classList.add("error");
   if (type === "success") snack.classList.add("success");
 
@@ -37,6 +37,12 @@ let newSnack = (inputText, type) => {
   setTimeout(removeSnack, 5000);
 };
 
-showsnack.addEventListener("click", () => newSnack(input.value || "Hello — snack time!"));
-snacksuccess.addEventListener("click", () => newSnack("Action completed successfully!", "success"));
-snackerror.addEventListener("click", () => newSnack("An error occurred!", "error"));
+showsnack.addEventListener("click", () =>
+  newSnack(input.value || "Hello — snack time!")
+);
+snacksuccess.addEventListener("click", () =>
+  newSnack("Action completed successfully!", "success")
+);
+snackerror.addEventListener("click", () =>
+  newSnack("An error occurred!", "error")
+);
