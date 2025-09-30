@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Snack Bar Demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <h1>Snack Bar</h1>
+    <p>Small demo of a responsive snack bar / toast UI with accessibility.</p>
+
+    <div class="controls">
+      <input id="snack-text" type="text" placeholder="Message to show" value="Hello — snack time!">
+      <button id="show-snack">Show snack</button>
+      <button id="show-success">Success</button>
+      <button id="show-error">Error</button>
+    </div>
+
+    <p class="note">Try resizing the window — the snack aligns bottom center on mobile and bottom-right on wide screens.</p>
+  </main>
+
+  <!-- Snackbar container: no class here -->
+  <div id="snackbar" role="status" aria-live="polite" aria-atomic="true"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
