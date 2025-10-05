@@ -1,21 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Stop Watch</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="app">
-      <nav class="controls">
-        <div class="reset-btn"></div>
-        <div class="play-pause"></div>
-      </nav>
-      <div class="time-info">
-        <span class="hrs">00</span>: <span class="min">00</span>:
-        <span class="sec">00</span>
-      </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="stopwatch">
+            <h1>Stopwatch</h1>
+            
+            <!-- Time Display -->
+            <div class="display">
+                <span id="hours">00</span>
+                <span class="separator">:</span>
+                <span id="minutes">00</span>
+                <span class="separator">:</span>
+                <span id="seconds">00</span>
+            </div>
+
+            <!-- Control Buttons -->
+            <div class="controls">
+                <button id="startBtn" class="btn start">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="M8 5v14l11-7z" fill="currentColor"/>
+                    </svg>
+                    Start
+                </button>
+                <button id="stopBtn" class="btn stop" disabled>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="M6 6h12v12H6z" fill="currentColor"/>
+                    </svg>
+                    Stop
+                </button>
+                <button id="resetBtn" class="btn reset" disabled>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="M17.65 6.35A7.958 7.958 0 0012 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08A5.99 5.99 0 0112 18c-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z" fill="currentColor"/>
+                    </svg>
+                    Reset
+                </button>
+                <button id="lapBtn" class="btn lap" disabled>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z" fill="currentColor"/>
+                    </svg>
+                    Lap
+                </button>
+            </div>
+
+            <!-- Lap Times List -->
+            <div class="laps">
+                <h2>Lap Times</h2>
+                <ul id="lapsList"></ul>
+            </div>
+        </div>
     </div>
-  </body>
+    <script src="script.js"></script>
+</body>
 </html>
