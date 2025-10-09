@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Show/Hide Password UI</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <form class="form">
+        <label for="password" class="label">Password</label>
+        <div class="input-wrap">
+          <input
+            id="password"
+            type="password"
+            placeholder="Enter your password"
+          />
+          <button
+            type="button"
+            class="eye-btn"
+            aria-label="Toggle password visibility"
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <path
+                d="M17.94 17.94A10.94 10.94 0 0112 19C7 19 2.73 15.89 1 12c.64-1.43 1.57-2.74 2.73-3.86M9.9 9.9a3 3 0 104.2 4.2M4.12 4.12L19.88 19.88"
+                stroke="#374151"
+                stroke-width="1.2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </div>
+      </form>
+    </main>
+    <script>
+      let eyeBtn = document.querySelector(".eye-btn");
+      let passwordInput = document.querySelector("#password");
+
+      eyeBtn.addEventListener("click", () => {
+        if (passwordInput.type === "password") {
+          passwordInput.type = "text";
+          eyeBtn.innerHTML = `
+          <button
+            type="button"
+            class="eye-btn"
+            aria-label="Toggle password visibility"
+          >
+           <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <path
+                d="M12 5C7 5 2.73 8.11 1 12c1.73 3.89 6 7 11 7s9.27-3.11 11-7c-1.73-3.89-6-7-11-7z"
+                stroke="#374151"
+                stroke-width="1.2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <circle
+                cx="12"
+                cy="12"
+                r="3"
+                stroke="#374151"
+                stroke-width="1.2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+       `;
+        } else {
+          passwordInput.type = "password";
+          eyeBtn.innerHTML = `<button
+            type="button"
+            class="eye-btn"
+            aria-label="Toggle password visibility"
+          >
+        <svg
+    width="20"
+    height="20"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+  >
+    <path
+      d="M17.94 17.94A10.94 10.94 0 0112 19C7 19 2.73 15.89 1 12c.64-1.43 1.57-2.74 2.73-3.86M9.9 9.9a3 3 0 104.2 4.2M4.12 4.12L19.88 19.88"
+      stroke="#374151"
+      stroke-width="1.2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>`;
+        }
+      });
+    </script>
+  </body>
+</html>

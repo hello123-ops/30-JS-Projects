@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="calculator-wrapper">
+      <div class="calculator" role="application" aria-label="Calculator">
+        <header class="calc-header">Calculator</header>
+
+        <div class="display" aria-live="polite">
+          <div class="expression" id="calcExpression">0</div>
+          <div class="result" id="calcResult">0</div>
+        </div>
+
+        <div class="keys" role="group" aria-label="Calculator keys">
+          <button class="key key-ac">AC</button>
+          <button class="key key-dc">DC</button>
+          <button class="key">%</button>
+          <button class="key key-op">÷</button>
+
+          <button class="key">7</button>
+          <button class="key">8</button>
+          <button class="key">9</button>
+          <button class="key key-op">×</button>
+
+          <button class="key">4</button>
+          <button class="key">5</button>
+          <button class="key">6</button>
+          <button class="key key-op">−</button>
+
+          <button class="key">1</button>
+          <button class="key">2</button>
+          <button class="key">3</button>
+          <button class="key key-op">+</button>
+
+          <button class="key key-zero">0</button>
+          <button class="key">.</button>
+          <button class="key key-equals">=</button>
+        </div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
